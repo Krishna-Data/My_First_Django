@@ -1,0 +1,17 @@
+h1{
+  color : blue;
+  text-align: center;
+  border: 2px dashed black;
+  padding: 1px;
+  margin: auto;
+  background-color: pink;
+}
+table{
+  padding: 25px;
+}
+thead,th,td{
+  border : 2px solid blue;
+}
+body{
+  background: #b1debd;
+}

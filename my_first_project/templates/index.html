@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>First Django Project</title>
+  </head>
+  <link rel="stylesheet" href="{% static "css/style.css" %}">
+  <body>
+    <h1>Welcome to Django!</h1>
+    <div class="djangoclass" align='center'>
+      {% if access_records %}
+      <table>
+        <thead>
+          <th>
+            <b>  WebPage Details </b>
+          </th>
+          <th>
+            <b> Date </b>
+          </th>
+        </thead>
+
+        {% for record in access_records %}
+        <tr>
+          <td>
+              {{ record.name_in_webpage }}
+          </td>
+          <td>
+              {{ record.date }}
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+      {% else %}
+      <p>NO ACCESS RECORDS FOUND!</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
